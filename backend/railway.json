@@ -1,0 +1,7 @@
+{
+  "$schema": "https://schema.railway.com/railway-config.json",
+  "deploy": {
+    "startCommand": "gunicorn config.wsgi --bind 0.0.0.0:$PORT",
+    "releaseCommand": "python manage.py migrate && python manage.py collectstatic --noinput"
+  }
+}
