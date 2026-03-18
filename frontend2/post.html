@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Single post | UNIT PEMBANGUNAN USAHAWAN NEGERI KEDAH</title>
+        <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
+        <link rel="stylesheet preload" as="style" href="css/icomoon.css" />
+        <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
+
+        <link rel="stylesheet" href="css/post.min.css" />
+    </head>
+    <body>
+        <header class="header" data-page="post">
+            <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between px-3">
+                <a class="brand-logo d-flex align-items-center header_logo" href="index.html">
+                    <img class="brand-logo_icon" src="Img/logo_upuk.png" alt="UPUK" height="80" style="object-fit:contain; width:auto;" />
+
+                    <span class="brand-logo_name">Unit Pembangunan Usahawan Kedah</span>
+                </a>
+                <nav class="header_nav">
+                    <ul class="header_nav-list">
+                        <li class="header_nav-list_item nav-item" data-page="home">
+                            <a class="nav-link" href="index.html">Utama</a>
+                        </li>
+                        <li class="header_nav-list_item nav-item" data-page="about">
+                            <a class="nav-link" href="about.html">Tentang</a>
+                        </li>
+                        <li class="header_nav-list_item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Anugerah</a>
+                            <ul class="dropdown-menu">
+                                <li class="list-item nav-item" data-page="services">
+                                    <a class="dropdown-item" href="404.html">Anugerah 2025</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="services2">
+                                    <a class="dropdown-item" href="services2.html">Anugerah 2026</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_nav-list_item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li class="list-item nav-item" data-page="post">
+                                    <a class="dropdown-item" href="post.html">Syarat Permohonan</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="blog">
+                                    <a class="dropdown-item" href="404.html">Upuk</a>
+                                </li>
+                                <li class="list-item nav-item">
+                                    <a class="dropdown-item" href="404.html">Fasa Program</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_nav-list_item nav-item" data-page="contacts">
+                            <a class="nav-link" href="contacts.html">Hubungi</a>
+                        </li>
+                        <li class="header_nav-list_item nav-item d-lg-none">
+                            <a class="nav-link" href="daftar.html">Daftar</a>
+                        </li>
+                        <!-- <li class="header_nav-list_item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li class="list-item nav-item" data-page="gallery">
+                                    <a class="dropdown-item" href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="error">
+                                    <a class="dropdown-item" href="404.html">404</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </nav>
+                <a class="header_btn btn theme-element" href="#">Daftar</a>
+                <span class="header_trigger d-inline-flex d-lg-none flex-column justify-content-between">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </div>
+        </header>
+        <style>
+            .syarat-page { padding: 120px 0 60px; background: #181818; min-height: 80vh; }
+            .syarat-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+            .syarat-hero { background: #202020; border-radius: 4px; padding: 48px 48px 36px; margin-bottom: 12px; }
+            .syarat-hero h1 { font-family: Oswald, sans-serif; font-size: 2rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+            .syarat-hero .meta { color: #eb1616; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-family: Oswald, sans-serif; }
+            .syarat-body { background: #202020; border-radius: 4px; padding: 40px 48px; }
+            .syarat-section { margin-bottom: 36px; }
+            .syarat-section:last-child { margin-bottom: 0; }
+            .syarat-section h3 { font-family: Oswald, sans-serif; font-size: 1rem; color: #eb1616; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #2e2e2e; }
+            .syarat-section p { color: #ccc; font-size: 0.95rem; line-height: 1.7; margin: 0 0 8px; }
+            .syarat-section ul { list-style: none; padding: 0; margin: 8px 0 0; }
+            .syarat-section ul li { color: #ccc; font-size: 0.95rem; line-height: 1.7; padding: 5px 0 5px 20px; position: relative; }
+            .syarat-section ul li::before { content: "\2013"; position: absolute; left: 0; color: #eb1616; }
+            .syarat-section ul li ul { margin: 4px 0 0 16px; }
+            .syarat-note { background: #181818; border-left: 3px solid #eb1616; padding: 18px 24px; border-radius: 2px; margin-top: 36px; color: #aaa; font-size: 0.9rem; line-height: 1.75; font-style: italic; }
+            @media (max-width: 640px) { .syarat-hero, .syarat-body { padding: 28px 20px; } }
+        </style>
+        <!-- Single post content start -->
+        <main>
+        <div class="syarat-page">
+            <div class="syarat-wrap">
+                <div class="syarat-hero">
+                    <h1>Syarat-Syarat Permohonan Anugerah</h1>
+                    <span class="meta">Unit Pembangunan Usahawan Negeri Kedah &nbsp;&middot;&nbsp; Anugerah Usahawan</span>
+                </div>
+                <div class="syarat-body">
+                    <div class="syarat-section">
+                        <h3>1. Kelayakan Asas</h3>
+                        <p>Warganegara Malaysia yang menetap atau menjalankan perniagaan di Negeri Kedah.</p>
+                    </div>
+                    <div class="syarat-section">
+                        <h3>2. Kewarganegaraan, Asal Usul &amp; Kedudukan Perniagaan</h3>
+                        <p>2.1. Terbuka kepada warganegara Malaysia yang:</p>
+                        <ul>
+                            <li>2.1.1. Menetap atau menjalankan perniagaan di Negeri Kedah secara aktif dan sah; atau</li>
+                            <li>2.1.2. Anak jati Kedah (berasal dari Negeri Kedah) yang kini menjalankan perniagaan di luar negeri, tetapi membawa impak dan citra positif kepada nama baik negeri.</li>
+                        </ul>
+                        <p style="margin-top:12px;">2.2. Syarat ini bertujuan untuk mengenal pasti dan mengiktiraf anak-anak Kedah yang berjaya sama ada di dalam atau di luar negeri.</p>
+                    </div>
+                    <div class="syarat-section">
+                        <h3>3. Tempoh Operasi Perniagaan</h3>
+                        <ul>
+                            <li>3.1. Perniagaan mestilah telah beroperasi sekurang-kurangnya <strong style="color:#fff;">12 bulan</strong> secara berterusan dari tarikh permohonan pencalonan.</li>
+                            <li>3.2. Ini bagi memastikan hanya perniagaan yang telah menunjukkan ketekalan dan ketahanan pasaran diberi pertimbangan.</li>
+                        </ul>
+                    </div>
+                    <div class="syarat-section">
+                        <h3>4. Pendaftaran Sah</h3>
+                        <p>4.1. Perniagaan mesti berdaftar secara sah di bawah salah satu entiti yang diiktiraf:</p>
+                        <ul>
+                            <li>4.1.1. Suruhanjaya Syarikat Malaysia (SSM)</li>
+                            <li>4.1.2. Jabatan Pendaftaran Pertubuhan Malaysia (ROS)</li>
+                            <li>4.1.3. Pendaftar Koperasi atau agensi rasmi berkaitan.</li>
+                        </ul>
+                    </div>
+                    <div class="syarat-section">
+                        <h3>5. Dokumen Sokongan</h3>
+                        <p>Setiap calon perlu mengemukakan dokumen lengkap berikut bagi tujuan semakan dan penilaian:</p>
+                        <ul>
+                            <li>5.1. Profil syarikat atau perniagaan</li>
+                            <li>5.2. Gambar pemilik/pengusaha serta premis/perkhidmatan/produk</li>
+                            <li>5.3. Penyata kewangan ringkas atau unjuran aliran tunai 12 bulan terkini</li>
+                            <li>5.4. Testimoni pelanggan, pencapaian jualan, atau surat sokongan daripada komuniti/pihak berwajib</li>
+                        </ul>
+                    </div>
+                    <div class="syarat-section">
+                        <h3>6. Pencalonan</h3>
+                        <p>6.1. Terbuka kepada:</p>
+                        <ul>
+                            <li>6.1.1. Pencalonan kendiri (oleh pemilik perniagaan sendiri)</li>
+                            <li>6.1.2. Pencalonan oleh pihak ketiga seperti persatuan, NGO, agensi kerajaan, PBT, ADUN, atau komuniti setempat</li>
+                        </ul>
+                        <p style="margin-top:12px;">6.2. Semua pencalonan akan melalui proses tapisan awal oleh sekretariat sebelum dibawa kepada panel teknikal penilaian.</p>
+                    </div>
+                    <div class="syarat-note">
+                        Syarat-syarat ini dirangka bagi memastikan penyertaan yang diterima benar-benar mencerminkan kualiti keusahawanan Negeri Kedah yang berdaya saing, inklusif, dan berwibawa &ndash; termasuk anak negeri yang berjaya mengharumkan nama Kedah di peringkat luar.
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <!-- Single post content end -->
+        <footer class="footer section-nopb">
+            <div class="container d-flex flex-column flex-md-row flex-md-wrap justify-content-between">
+                <div class="footer_logo footer_block col-lg-3">
+                    <a class="brand-logo d-flex align-items-center" href="index.html">
+                        <img class="brand-logo_icon" src="Img/logo_upuk.png" alt="UPUK" height="80" style="object-fit:contain; width:auto;" />
+                    </a>
+                </div>
+                <div class="wrapper d-flex flex-column flex-md-row flex-grow-1 justify-content-lg-between">
+                    <div class="footer_contacts footer_block col-xl-4">
+                        <span class="footer_contacts-tel d-flex align-items-center">
+                            <span class="icon">
+                                <i class="icon-phone"></i>
+                            </span>
+                            <a class="link" href="tel:+1234567890">04-735 0069</a>
+                        </span>
+                        <p class="footer_contacts-address">
+                            <span class="linebreak">Lot 3-7, Tingkat 3, Bangunan UTC Kedah,<br> Jalan Kolam Air, Alor Setar  </span>
+                            <span class="linebreak">Kedah, Malaysia</span>
+                        </p>
+                        <a class="footer_contacts-mail" href="mailto:example@domain.com">upuk@kedah.gov.my</a>
+                        <ul class="footer_contacts-socials d-flex align-items-center">
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener norefferer">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener norefferer">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener norefferer">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_newsletter footer_block">
+                        <h3 class="footer_newsletter-header">Langgan Kemas Kini</h3>
+                        <p class="footer_newsletter-text text">
+                           Dapatkan maklumat terkini mengenai Anugerah Usahawan Negeri Kedah termasuk pengumuman, aktiviti dan peluang penyertaan yang dikemaskini secara berkala.
+                        </p>
+                        <form
+                            class="footer_newsletter-form d-flex flex-wrap flex-sm-nowrap"
+                            action="#"
+                            method="post"
+                            data-type="newsletter"
+                        >
+                            <input class="field required" data-type="email" type="text" placeholder="Your email address" />
+                            <button class="btn theme-element" type="submit">Langgan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="offset col-lg-3 d-none d-lg-flex"></div>
+                <p class="footer_copyright flex-grow-1">
+                    
+                    <span class="linebreak">&copy; 2026 Usahawan Kedah. Hak cipta terpelihara. <span id="currentYear"></span></span>
+                </p>
+            </div>
+        </footer>
+        <script src="js/common.min.js"></script>
+    </body>
+</html>
