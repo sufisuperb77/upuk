@@ -3,6 +3,11 @@ Business registration model. Files stored in media; only paths stored in DB.
 """
 import uuid
 from django.db import models
+try:
+    from cloudinary_storage.storage import RawMediaCloudinaryStorage
+    _raw_storage = RawMediaCloudinaryStorage()
+except ImportError:
+    _raw_storage = None
 from .constants import (
     NEGERI_CHOICES,
     DAERAH_CHOICES,
@@ -66,8 +71,9 @@ class Business(models.Model):
     # Documents & media (paths only in DB; files on storage)
     ssm_certificate = models.FileField(
         upload_to=ssm_certificate_upload_path,
+        storage=_raw_storage,
         max_length=500,
-        help_text='PDF upload',
+        help_text='PDF or image upload',
     )
     company_logo = models.ImageField(
         upload_to=company_logo_upload_path,

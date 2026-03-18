@@ -92,6 +92,10 @@ class BusinessAdmin(admin.ModelAdmin):
         if not obj.pk or not obj.ssm_certificate:
             return '-'
         url = obj.ssm_certificate.url
+        # Cloudinary stores PDFs/images uploaded before RawMediaCloudinaryStorage
+        # was configured under /image/upload/. Rewrite to /raw/upload/ so the
+        # browser receives the actual file instead of an error page.
+        url = url.replace('/image/upload/', '/raw/upload/', 1)
         return format_html('<a href="{}" target="_blank">View / Download SSM</a>', url)
     ssm_certificate_link.short_description = 'SSM certificate'
 
