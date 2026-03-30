@@ -4,7 +4,7 @@ Django Admin for Business registrations: view, search, filter, approve/reject.
 from django.contrib import admin
 from django.utils import timezone
 from django.utils.html import format_html
-from .models import Business, BusinessProductImage
+from .models import Business, BusinessProductImage, SiteVisit
 from .constants import REGISTRATION_STATUS_CHOICES
 
 
@@ -124,3 +124,11 @@ class BusinessAdmin(admin.ModelAdmin):
     def reject_selected(self, request, queryset):
         updated = queryset.update(status='rejected', status_updated_at=timezone.now())
         self.message_user(request, f'{updated} registration(s) rejected.')
+
+
+@admin.register(SiteVisit)
+class SiteVisitAdmin(admin.ModelAdmin):
+    list_display = ['page', 'visited_at']
+    list_filter = ['page']
+    ordering = ['-visited_at']
+    readonly_fields = ['page', 'visited_at']

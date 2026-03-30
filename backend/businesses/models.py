@@ -144,3 +144,17 @@ class BusinessProductImage(models.Model):
 
     def __str__(self):
         return f'Product image for {self.business_id}'
+
+
+class SiteVisit(models.Model):
+    """Records each page view on the frontend2 static site."""
+    page = models.CharField(max_length=100, default='', db_index=True)
+    visited_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    class Meta:
+        verbose_name = 'Site Visit'
+        verbose_name_plural = 'Site Visits'
+        ordering = ['-visited_at']
+
+    def __str__(self):
+        return f'{self.page} @ {self.visited_at}'

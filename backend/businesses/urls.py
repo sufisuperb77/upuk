@@ -26,4 +26,6 @@ urlpatterns = [
     path('analytics/by-negeri/', views.AnalyticsByNegeriView.as_view(), name='analytics-by-negeri'),
     path('analytics/by-category/', views.AnalyticsByCategoryView.as_view(), name='analytics-by-category'),
     path('analytics/revenue-distribution/', views.AnalyticsRevenueDistributionView.as_view(), name='analytics-revenue'),
+    # Visitor counter (public)
+    path('visitor-count/', views.VisitorCountView.as_view(), name='visitor-count'),
 ]

@@ -9,7 +9,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.db.models import Count
-from .models import Business, BusinessProductImage
+from .models import Business, BusinessProductImage, SiteVisit
 from .serializers import (
     BusinessRegistrationSerializer,
     BusinessListSerializer,
@@ -150,3 +150,20 @@ class AnalyticsRevenueDistributionView(APIView):
         )
         data = [{'monthly_revenue_range': r['monthly_revenue_range'], 'count': r['count']} for r in qs]
         return Response(data)
+
+
+# ----- Public: site visit counter -----
+@method_decorator(csrf_exempt, name='dispatch')
+class VisitorCountView(APIView):
+    """GET: total visits. POST: record a visit + return updated total."""
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        total = SiteVisit.objects.count()
+        return Response({'total': total})
+
+    def post(self, request):
+        page = (request.data.get('page') or '')[:100]
+        SiteVisit.objects.create(page=page)
+        total = SiteVisit.objects.count()
+        return Response({'total': total}, status=status.HTTP_201_CREATED)

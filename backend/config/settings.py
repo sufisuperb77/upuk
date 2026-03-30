@@ -115,7 +115,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS: allow React app (separate project) to call APIs
 CORS_ALLOWED_ORIGINS = os.environ.get(
     'CORS_ALLOWED_ORIGINS',
-    'http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,http://localhost:8001,http://localhost:5500,http://127.0.0.1:5500'
+    'http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,http://localhost:8001,http://localhost:5500,http://127.0.0.1:5500,https://magical-tartufo-7b6319.netlify.app'
 ).split(',')
 CORS_ALLOW_CREDENTIALS = True
 # Allow file:// (null origin) and any local origin in debug mode
@@ -125,7 +125,7 @@ if DEBUG:
 # CSRF: trust the frontend origin
 CSRF_TRUSTED_ORIGINS = os.environ.get(
     'CSRF_TRUSTED_ORIGINS',
-    'http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,http://localhost:8001,http://localhost:5500,http://127.0.0.1:5500'
+    'http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,http://localhost:8001,http://localhost:5500,http://127.0.0.1:5500,https://magical-tartufo-7b6319.netlify.app,https://upuk-production.up.railway.app'
 ).split(',')
 CSRF_COOKIE_SECURE = not DEBUG  # True in production (HTTPS enforced)
 CSRF_COOKIE_HTTPONLY = False  # Must be False so JavaScript can read it
