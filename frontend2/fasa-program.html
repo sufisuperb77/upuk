@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ms">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Fasa Program | UNIT PEMBANGUNAN USAHAWAN NEGERI KEDAH</title>
+        <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
+        <link rel="stylesheet preload" as="style" href="css/icomoon.css" />
+        <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
+        <link rel="stylesheet" href="css/post.min.css" />
+        <style>
+            @media (min-width: 992px) {
+                .header_nav .dropdown:hover > .dropdown-menu {
+                    display: block;
+                    max-height: 500px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    margin-top: 0;
+                }
+            }
+            .fasa-hero { padding: 140px 0 60px; background: #181818; text-align: center; }
+            .fasa-hero .overline { display: block; font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; color: #eb1616; margin-bottom: 14px; }
+            .fasa-hero h1 { font-family: Oswald, sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); color: #fff; text-transform: uppercase; margin: 0 0 16px; }
+            .fasa-hero p { color: #aaa; font-size: 1rem; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+            .timeline-section { padding: 60px 0; background: #141414; border-top: 3px solid #eb1616; }
+            .timeline-bar { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; }
+            .timeline-item { flex: 1; min-width: 160px; max-width: 260px; text-align: center; padding: 24px 16px; position: relative; transition: background .3s; }
+            .timeline-item:hover { background: #1a1a1a; }
+            .timeline-item::after { content: '\2192'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: #eb1616; font-size: 1.4rem; font-weight: 700; }
+            .timeline-item:last-child::after { display: none; }
+            .timeline-item .q-label { font-family: Oswald, sans-serif; font-size: 1.4rem; color: #eb1616; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 6px; }
+            .timeline-item .q-months { color: #aaa; font-size: 0.85rem; letter-spacing: 0.5px; }
+            .timeline-item .q-tag { display: inline-block; margin-top: 10px; font-family: Oswald, sans-serif; font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; border: 1px solid #333; color: #777; }
+            .fasa-content { padding: 60px 0 80px; background: #181818; }
+            .fasa-wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+            .fasa-chapter { background: #202020; border-radius: 4px; padding: 40px 48px; margin-bottom: 24px; border-left: 4px solid #eb1616; }
+            .fasa-chapter .chapter-label { font-family: Oswald, sans-serif; font-size: 0.75rem; color: #eb1616; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; display: block; }
+            .fasa-chapter h2 { font-family: Oswald, sans-serif; font-size: 1.5rem; color: #fff; text-transform: uppercase; margin: 0 0 12px; }
+            .fasa-chapter .chapter-intro { color: #aaa; font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #2e2e2e; }
+            .fasa-chapter h4 { font-family: Oswald, sans-serif; font-size: 0.9rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin: 20px 0 10px; }
+            .fasa-chapter ul { list-style: none; padding: 0; margin: 0; }
+            .fasa-chapter ul li { color: #ccc; font-size: 0.93rem; line-height: 1.7; padding: 5px 0 5px 22px; position: relative; }
+            .fasa-chapter ul li::before { content: "\2013"; position: absolute; left: 0; color: #eb1616; }
+            .fasa-chapter ul li a { color: #eb1616; text-decoration: none; }
+            .fasa-chapter ul li a:hover { text-decoration: underline; }
+            .fasa-chapter .location-tag { display: inline-block; margin-top: 12px; font-size: 0.8rem; color: #777; background: #181818; padding: 4px 12px; border-radius: 3px; }
+            .fasa-highlight { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 4px; padding: 48px; margin-bottom: 24px; text-align: center; border-top: 3px solid #eb1616; }
+            .fasa-highlight .trophy { font-size: 3rem; display: block; margin-bottom: 16px; }
+            .fasa-highlight h2 { font-family: Oswald, sans-serif; font-size: 1.5rem; color: #fff; text-transform: uppercase; margin: 0 0 8px; }
+            .fasa-highlight .hl-sub { color: #eb1616; font-family: Oswald, sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; display: block; }
+            .fasa-highlight .hl-items { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+            .fasa-highlight .hl-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 24px 28px; min-width: 220px; text-align: center; }
+            .fasa-highlight .hl-card .icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+            .fasa-highlight .hl-card h4 { font-family: Oswald, sans-serif; font-size: 1rem; color: #fff; text-transform: uppercase; margin: 0 0 6px; }
+            .fasa-highlight .hl-card p { color: #aaa; font-size: 0.82rem; margin: 0; }
+            @media (max-width: 640px) { .fasa-chapter { padding: 28px 20px; } .fasa-highlight { padding: 32px 20px; } .timeline-item::after { display: none; } }
+        </style>
+    </head>
+    <body>
+        <header class="header" data-page="blog">
+            <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between px-3">
+                <a class="brand-logo d-flex align-items-center header_logo" href="index.html">
+                    <img class="brand-logo_icon" src="Img/logo_upuk.png" alt="UPUK" height="80" style="object-fit:contain; width:auto;" />
+                    <span class="brand-logo_name">Unit Pembangunan Usahawan Kedah</span>
+                </a>
+                <nav class="header_nav">
+                    <ul class="header_nav-list">
+                        <li class="header_nav-list_item nav-item" data-page="home">
+                            <a class="nav-link" href="index.html">Utama</a>
+                        </li>
+                        <li class="header_nav-list_item nav-item" data-page="about">
+                            <a class="nav-link" href="about.html">Tentang</a>
+                        </li>
+                        <li class="header_nav-list_item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Program</a>
+                            <ul class="dropdown-menu">
+                                <li class="list-item nav-item" data-page="training">
+                                    <a class="dropdown-item" href="training.html">Latihan &amp; Kursus</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="expo">
+                                    <a class="dropdown-item" href="expo.html">Expo &amp; Acara</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="explorasi">
+                                    <a class="dropdown-item" href="explorasi.html">Explorasi Usahawan</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="karnival">
+                                    <a class="dropdown-item" href="karnival.html">Karnival Usahawan</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="list-item nav-item" data-page="services2">
+                                    <a class="dropdown-item" href="services2.html">Anugerah Usahawan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_nav-list_item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li class="list-item nav-item" data-page="post">
+                                    <a class="dropdown-item" href="post.html">Syarat Permohonan</a>
+                                </li>
+                                <li class="list-item nav-item" data-page="blog">
+                                    <a class="dropdown-item" href="404.html">Upuk</a>
+                                </li>
+                                <li class="list-item nav-item">
+                                    <a class="dropdown-item" href="fasa-program.html">Fasa Program</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_nav-list_item nav-item" data-page="contacts">
+                            <a class="nav-link" href="contacts.html">Hubungi</a>
+                        </li>
+                        <li class="header_nav-list_item nav-item d-lg-none">
+                            <a class="nav-link" href="daftar.html">Daftar</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header_btn btn theme-element" href="daftar.html">Daftar</a>
+                <span class="header_trigger d-inline-flex d-lg-none flex-column justify-content-between">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </div>
+        </header>
+        <main>
+            <section class="fasa-hero">
+                <div class="container">
+                    <span class="overline">Program UPUK 2026</span>
+                    <h1>Fasa Program Keusahawanan UPUK Kedah 2026</h1>
+                    <p>Program pembangunan usahawan UPUK Kedah dilaksanakan secara berperingkat dari Q1 hingga Q4 sepanjang tahun 2026, merangkumi latihan, ekspo, explorasi dan acara pengiktirafan usahawan.</p>
+                </div>
+            </section>
+            <section class="timeline-section">
+                <div class="container">
+                    <div class="timeline-bar">
+                        <div class="timeline-item">
+                            <span class="q-label">Q1</span>
+                            <span class="q-months">Januari &ndash; Mac</span>
+                            <span class="q-tag">Asas &amp; Latihan</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="q-label">Q2</span>
+                            <span class="q-months">April &ndash; Jun</span>
+                            <span class="q-tag">Pendedahan &amp; Expo</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="q-label">Q3</span>
+                            <span class="q-months">Julai &ndash; September</span>
+                            <span class="q-tag">Pertumbuhan</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="q-label">Q4</span>
+                            <span class="q-months">Oktober &ndash; Disember</span>
+                            <span class="q-tag">Pengiktirafan</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="fasa-content">
+                <div class="fasa-wrap">
+                    <div class="fasa-chapter">
+                        <span class="chapter-label">Fasa 1 &mdash; Q1</span>
+                        <h2>Januari &ndash; Mac 2026</h2>
+                        <p class="chapter-intro">Fasa pertama memberi tumpuan kepada pembinaan asas keusahawanan. Usahawan akan didedahkan dengan latihan asas perancangan perniagaan, teknologi pembungkusan, dan perkongsian ilmu bersama pakar industri.</p>
+                        <h4>&#128204; Program</h4>
+                        <ul>
+                            <li><a href="program-bmc.html">Kursus Business Model Canvas (BMC)</a></li>
+                            <li><a href="program-retort-1.html">Kursus Asas Teknologi Retort &amp; Pembungkusan (Siri 1)</a></li>
+                            <li><a href="program-insken.html">Online Business Talk by INSKEN &amp; HDC</a></li>
+                        </ul>
+                        <h4>&#127919; Objektif</h4>
+                        <ul>
+                            <li>Membina model perniagaan yang kukuh dan sistematik</li>
+                            <li>Pendedahan awal kepada teknologi pembungkusan moden</li>
+                            <li>Perkongsian ilmu perniagaan secara dalam talian</li>
+                        </ul>
+                        <span class="location-tag">&#128205; Alor Setar &middot; Langkawi &middot; Online</span>
+                    </div>
+                    <div class="fasa-chapter">
+                        <span class="chapter-label">Fasa 2 &mdash; Q2</span>
+                        <h2>April &ndash; Jun 2026</h2>
+                        <p class="chapter-intro">Fasa kedua meningkatkan pendedahan usahawan melalui kursus lanjutan dan penyertaan dalam ekspo. Usahawan akan mempelajari strategi perancangan perniagaan, percukaian, dan pemasaran digital.</p>
+                        <h4>&#128204; Program</h4>
+                        <ul>
+                            <li>Penulisan Rancangan Perniagaan</li>
+                            <li><a href="program-percukaian.html">Kursus Percukaian &amp; E-Invois</a></li>
+                            <li><a href="program-digital.html">Revolusi Pemasaran Digital</a></li>
+                        </ul>
+                        <h4>&#127758; Acara &amp; Expo</h4>
+                        <ul>
+                            <li>SIFEX 2026</li>
+                            <li><a href="explorasi.html">Explorasi Usahawan (Kota Setar, Langkawi)</a></li>
+                        </ul>
+                        <span class="location-tag">&#128205; Alor Setar &middot; Langkawi</span>
+                    </div>
+                    <div class="fasa-chapter">
+                        <span class="chapter-label">Fasa 3 &mdash; Q3</span>
+                        <h2>Julai &ndash; September 2026</h2>
+                        <p class="chapter-intro">Fasa pertumbuhan dan pengembangan. Usahawan dibimbing untuk memanfaatkan teknologi AI, mengukuhkan strategi jualan, dan menguruskan kewangan perniagaan secara lebih sistematik.</p>
+                        <h4>&#128204; Program</h4>
+                        <ul>
+                            <li><a href="program-ai.html">Kursus Pendigitalan &amp; AI</a></li>
+                            <li><a href="program-jualan.html">Kursus Strategi Jualan &amp; Kesetiaan Pelanggan</a></li>
+                            <li><a href="program-akaun.html">Kursus Pengurusan Akaun &amp; Aliran Tunai</a></li>
+                        </ul>
+                        <h4>&#127758; Acara &amp; Expo</h4>
+                        <ul>
+                            <li>MAHA 2026</li>
+                            <li>MIHAS 2026</li>
+                            <li><a href="explorasi.html">Explorasi Usahawan (Padang Terap)</a></li>
+                        </ul>
+                        <span class="location-tag">&#128205; Serdang &middot; MITEC KL &middot; Padang Terap</span>
+                    </div>
+                    <div class="fasa-chapter">
+                        <span class="chapter-label">Fasa 4 &mdash; Q4</span>
+                        <h2>Oktober &ndash; Disember 2026</h2>
+                        <p class="chapter-intro">Fasa kemuncak &mdash; acara pengiktirafan dan pameran berskala besar. Usahawan terbaik akan diiktiraf melalui Anugerah Usahawan Kedah, bersama karnival dan ekspo peringkat negeri dan antarabangsa.</p>
+                        <h4>&#128204; Program</h4>
+                        <ul>
+                            <li><a href="program-pembungkusan.html">Kursus Pembungkusan &amp; Perlabelan</a></li>
+                            <li><a href="program-retort-2.html">Kursus Retort &amp; Pembungkusan (Siri 2)</a></li>
+                            <li><a href="program-myipo.html">Kursus MyIPO &amp; Branding</a></li>
+                        </ul>
+                        <h4>&#127758; Acara &amp; Expo</h4>
+                        <ul>
+                            <li>SDSI 2026</li>
+                            <li>LIHAS Langkawi 2026</li>
+                            <li><a href="karnival.html">Karnival Usahawan Kedah</a></li>
+                            <li><a href="services2.html">Anugerah Usahawan Kedah</a></li>
+                        </ul>
+                        <span class="location-tag">&#128205; Alor Setar &middot; Langkawi &middot; Kuala Lumpur</span>
+                    </div>
+                    <div class="fasa-highlight">
+                        <span class="trophy">&#127942;</span>
+                        <h2>Highlight Program 2026</h2>
+                        <span class="hl-sub">Program Utama Tahun Ini</span>
+                        <div class="hl-items">
+                            <div class="hl-card">
+                                <span class="icon">&#127914;</span>
+                                <h4>Karnival Usahawan Kedah</h4>
+                                <p>Pameran dan jualan berskala besar yang menghimpunkan usahawan seluruh Negeri Kedah.</p>
+                            </div>
+                            <div class="hl-card">
+                                <span class="icon">&#127941;</span>
+                                <h4>Anugerah Usahawan Kedah</h4>
+                                <p>Pengiktirafan tertinggi kepada usahawan cemerlang Negeri Kedah pada tahun 2026.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer section-nopb">
+            <div class="container d-flex flex-column flex-md-row flex-md-wrap justify-content-between">
+                <div class="footer_logo footer_block col-lg-3">
+                    <a class="brand-logo d-flex align-items-center" href="index.html">
+                        <img class="brand-logo_icon" src="Img/logo_upuk.png" alt="UPUK" height="80" style="object-fit:contain; width:auto;" />
+                    </a>
+                    <img src="Img/EK2.png" alt="EK2" height="80" style="object-fit:contain; width:auto; margin-top:16px;" />
+                </div>
+                <div class="wrapper d-flex flex-column flex-md-row flex-grow-1 justify-content-lg-between">
+                    <div class="footer_contacts footer_block col-xl-4">
+                        <span class="footer_contacts-tel d-flex align-items-center">
+                            <span class="icon">
+                                <i class="icon-phone"></i>
+                            </span>
+                            <a class="link" href="tel:+1234567890">04-735 0069</a>
+                        </span>
+                        <p class="footer_contacts-address">
+                            <span class="linebreak">Lot 3-7, Tingkat 3, Bangunan UTC Kedah,<br> Jalan Kolam Air, Alor Setar</span>
+                            <span class="linebreak">Kedah, Malaysia</span>
+                        </p>
+                        <a class="footer_contacts-mail" href="mailto:upuk@kedah.gov.my">upuk@kedah.gov.my</a>
+                        <ul class="footer_contacts-socials d-flex align-items-center">
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener noreferrer">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_newsletter footer_block">
+                        <h3 class="footer_newsletter-header">Langgan Kemas Kini</h3>
+                        <p class="footer_newsletter-text text">
+                            Dapatkan maklumat terkini mengenai Anugerah Usahawan Negeri Kedah termasuk pengumuman, aktiviti dan peluang penyertaan yang dikemaskini secara berkala.
+                        </p>
+                        <form class="footer_newsletter-form d-flex flex-wrap flex-sm-nowrap" action="#" method="post" data-type="newsletter">
+                            <input class="field required" data-type="email" type="text" placeholder="Your email address" />
+                            <button class="btn theme-element" type="submit">Langgan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="offset col-lg-3 d-none d-lg-flex"></div>
+                <p class="footer_copyright flex-grow-1">
+                    <span class="linebreak">&copy; 2026 Usahawan Kedah. Hak cipta terpelihara.</span>
+                    <br><span id="visitor-counter" style="font-size:0.85em;opacity:0.8;display:none;"></span>
+                </p>
+            </div>
+        </footer>
+        <script src="js/common.min.js"></script>
+        <script src="js/visitor-counter.js"></script>
+    </body>
+</html>
