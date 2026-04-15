@@ -10,6 +10,17 @@
         <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
 
         <link rel="stylesheet" href="css/error.min.css" />
+            <style>
+            @media (min-width: 992px) {
+                .header_nav .dropdown:hover > .dropdown-menu {
+                    display: block;
+                    max-height: 500px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    margin-top: 0;
+                }
+            }
+        </style>
     </head>
     <body class="fullscreen d-flex flex-wrap align-items-center justify-content-center">
         <main class="error d-flex align-items-center justify-content-center">
@@ -63,6 +74,7 @@
                     <a class="brand-logo d-flex align-items-center" href="index.html">
                         <img class="brand-logo_icon" src="Img/logo_upuk.png" alt="UPUK" height="80" style="object-fit:contain; width:auto;" />
                     </a>
+                    <img src="Img/EK2.png" alt="EK2" height="80" style="object-fit:contain; width:auto; margin-top:16px;" />
                 </div>
                 <div class="wrapper d-flex flex-column flex-md-row flex-grow-1 justify-content-lg-between">
                     <div class="footer_contacts footer_block col-xl-4">
@@ -114,7 +126,7 @@
                 <div class="offset col-lg-3 d-none d-lg-flex"></div>
                 <p class="footer_copyright flex-grow-1">
                     
-                    <span class="linebreak">Â© 2026 Usahawan Kedah. Hak cipta terpelihara. <span id="currentYear"></span></span>
+                    <span class="linebreak">&copy; 2026 Usahawan Kedah. Hak cipta terpelihara. <span id="currentYear"></span></span>
                     <br><span id="visitor-counter" style="font-size:0.85em;opacity:0.8;display:none;"></span>
                 </p>
             </div>

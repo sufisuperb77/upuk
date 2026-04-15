@@ -10,6 +10,17 @@
         <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
 
         <link rel="stylesheet" href="css/index.min.css" />
+        <style>
+            @media (min-width: 992px) {
+                .header_nav .dropdown:hover > .dropdown-menu {
+                    display: block;
+                    max-height: 500px;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    margin-top: 0;
+                }
+            }
+        </style>
     </head>
     <body>
         <header class="header" data-page="home">
@@ -43,11 +54,8 @@
                                     <a class="dropdown-item" href="karnival.html">Karnival Usahawan</a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li class="list-item nav-item" data-page="services">
-                                    <a class="dropdown-item" href="404.html">Anugerah 2025</a>
-                                </li>
                                 <li class="list-item nav-item" data-page="services2">
-                                    <a class="dropdown-item" href="services2.html">Anugerah 2026</a>
+                                    <a class="dropdown-item" href="services2.html">Anugerah Usahawan</a>
                                 </li>
                             </ul>
                         </li>
@@ -116,15 +124,15 @@
                 <div
                     class="container d-flex flex-column justify-content-center align-items-center align-items-md-start align-items-lg-center align-items-xl-start"
                 >
-                    <div class="hero_content col-xl-7 col-xxl-6">
-                        <h1 class="hero_content-header">Bersedia Memulakan Perjalanan Anda?</h1>
+                    <div class="hero_content col-xl-9 col-xxl-8" style="background:rgba(0,0,0,0.5);padding:30px 36px;border-radius:8px;">
+                        <h1 class="hero_content-header">Program Peningkatan Pembangunan Usahawan Kedah 2026</h1>
                         <p class="hero_content-text text">
-                            Daftarkan perniagaan anda hari ini dan sertai komuniti kami bersama
+                            Program pembangunan usahawan untuk meningkatkan kapasiti PMKS di Negeri Kedah bersama
                             <span class="linebreak">Unit Pembangunan Usahawan Negeri Kedah</span>
                         </p>
                         <span class="hero_content-tel d-inline-flex align-items-center">
                             <span class="icon d-flex justify-content-center align-items-center">
-                                <i class="icon-reply"></i>
+                                
                             </span>
                             <a class="btn theme-element" href="daftar.html">Sertai Kami</a>
                         </span>
@@ -170,7 +178,7 @@
                             </div>
                         </div>
                         <div class="wrapper" data-aos="fade-up" data-aos-delay="100">
-                            <a class="about_info-btn btn theme-element" href="about.html">lebih lanjut</a>
+                            <a class="about_info-btn btn theme-element" href="services2.html">lebih lanjut</a>
                         </div>
                     </div>
                 </div>
@@ -440,29 +448,53 @@
             </section>
             <!-- services section end -->
 
-            <!-- schedule section start -->
+            <!-- program cards section start -->
             <section class="schedule section">
                 <span class="overlay"></span>
-                <div class="schedule_container container d-xl-flex flex-wrap">
-                    <div class="schedule_content col-xl-6">
-                        <h2 class="schedule_content-header" data-aos="fade-right">Misi</h2>
-                        <p class="schedule_content-text text" data-aos="fade-right">
-                            Mewujudkan sebuah platform strategik yang menyokong pembangunan usahawan melalui sistem pencalonan yang telus, pengumpulan data bersepadu, penglibatan komuniti secara menyeluruh serta pemerkasaan
-                            ekonomi rakyat melalui pendekatan inovatif dan berimpak tinggi di peringkat negeri.
+                <div class="schedule_container container">
+                    <div class="mb-5">
+                        <h2 class="schedule_content-header" data-aos="fade-right" style="margin-bottom:10px;">Program Kami</h2>
+                        <p class="schedule_content-text text" data-aos="fade-right" style="max-width:600px;">
+                            Sertai program-program pembangunan usahawan yang dianjurkan oleh UPUK Kedah.
                         </p>
                     </div>
-                    <div class="schedule_hours col-xl-6">
-                       <h2 class="schedule_content-header" data-aos="fade-right">Visi</h2>
-                        <p class="schedule_content-text text" data-aos="fade-right">
-                            Menjadikan Anugerah Usahawan Negeri Kedah sebagai platform berprestij yang mengangkat martabat usahawan tempatan melalui pengiktirafan berstruktur,
-                            pemetaan data yang komprehensif serta pembangunan ekosistem keusahawanan yang inklusif, mampan dan berdaya saing selaras dengan aspirasi Kedah 2035.
-                    </div>
-                    <div class="wrapper schedule_wrapper" data-aos="fade-up">
-                        <a class="schedule_btn btn theme-element" href="daftar.html">Sertai Kami</a>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up">
+                            <a href="training.html" style="background:#202020;border-radius:4px;padding:36px 24px;text-align:center;display:flex;flex-direction:column;height:100%;text-decoration:none;transition:transform .25s,box-shadow .25s;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 36px rgba(235,22,22,.18)';this.style.borderTopColor='#eb1616'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderTopColor='transparent'">
+                                <span style="font-size:3rem;display:block;margin-bottom:20px;">📋</span>
+                                <h3 style="font-family:Oswald,sans-serif;font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:10px;">Latihan &amp; Kursus</h3>
+                                <p style="color:#aaa;font-size:0.88rem;flex-grow:1;margin:0;">Tingkatkan kemahiran perniagaan melalui program latihan yang dianjurkan oleh UPUK.</p>
+                                <span style="display:inline-block;margin-top:20px;font-family:Oswald,sans-serif;font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:#eb1616;">Lihat Program →</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+                            <a href="expo.html" style="background:#202020;border-radius:4px;padding:36px 24px;text-align:center;display:flex;flex-direction:column;height:100%;text-decoration:none;transition:transform .25s,box-shadow .25s;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 36px rgba(235,22,22,.18)';this.style.borderTopColor='#eb1616'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderTopColor='transparent'">
+                                <span style="font-size:3rem;display:block;margin-bottom:20px;">🎪</span>
+                                <h3 style="font-family:Oswald,sans-serif;font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:10px;">Expo &amp; Acara</h3>
+                                <p style="color:#aaa;font-size:0.88rem;flex-grow:1;margin:0;">Pameran dan acara keusahawanan untuk memperluas jaringan perniagaan anda.</p>
+                                <span style="display:inline-block;margin-top:20px;font-family:Oswald,sans-serif;font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:#eb1616;">Lihat Program →</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                            <a href="explorasi.html" style="background:#202020;border-radius:4px;padding:36px 24px;text-align:center;display:flex;flex-direction:column;height:100%;text-decoration:none;transition:transform .25s,box-shadow .25s;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 36px rgba(235,22,22,.18)';this.style.borderTopColor='#eb1616'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderTopColor='transparent'">
+                                <span style="font-size:3rem;display:block;margin-bottom:20px;">🔍</span>
+                                <h3 style="font-family:Oswald,sans-serif;font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:10px;">Explorasi Usahawan</h3>
+                                <p style="color:#aaa;font-size:0.88rem;flex-grow:1;margin:0;">Terokai peluang perniagaan baharu dan kembangkan potensi keusahawanan anda.</p>
+                                <span style="display:inline-block;margin-top:20px;font-family:Oswald,sans-serif;font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:#eb1616;">Lihat Program →</span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                            <a href="karnival.html" style="background:#202020;border-radius:4px;padding:36px 24px;text-align:center;display:flex;flex-direction:column;height:100%;text-decoration:none;transition:transform .25s,box-shadow .25s;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 36px rgba(235,22,22,.18)';this.style.borderTopColor='#eb1616'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderTopColor='transparent'">
+                                <span style="font-size:3rem;display:block;margin-bottom:20px;">🎉</span>
+                                <h3 style="font-family:Oswald,sans-serif;font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:10px;">Karnival Usahawan</h3>
+                                <p style="color:#aaa;font-size:0.88rem;flex-grow:1;margin:0;">Karnival keusahawanan untuk menghubungkan usahawan dengan peluang dan komuniti.</p>
+                                <span style="display:inline-block;margin-top:20px;font-family:Oswald,sans-serif;font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:#eb1616;">Lihat Program →</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
-            <!-- schedule section end -->
+            <!-- program cards section end -->
 
             <!-- blog section start -->
             <section class="blog section">
@@ -547,6 +579,7 @@
                     <a class="brand-logo d-flex align-items-center" href="index.html">
                         <img class="brand-logo_icon" src="Img/logo_upuk.png" alt="UPUK" height="80" style="object-fit:contain; width:auto;" />
                     </a>
+                    <img src="Img/EK2.png" alt="EK2" height="80" style="object-fit:contain; width:auto; margin-top:16px;" />
                 </div>
                 <div class="wrapper d-flex flex-column flex-md-row flex-grow-1 justify-content-lg-between">
                     <div class="footer_contacts footer_block col-xl-4">
@@ -598,7 +631,7 @@
                 <div class="offset col-lg-3 d-none d-lg-flex"></div>
                 <p class="footer_copyright flex-grow-1">
                     
-                    <span class="linebreak">Â© 2026 Usahawan Kedah. Hak cipta terpelihara. <span id="currentYear"></span></span>
+                    <span class="linebreak">&copy; 2026 Usahawan Kedah. Hak cipta terpelihara. <span id="currentYear"></span></span>
                     <br><span id="visitor-counter" style="font-size:0.85em;opacity:0.8;display:none;"></span>
                 </p>
             </div>
