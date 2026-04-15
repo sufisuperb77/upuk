@@ -90,63 +90,27 @@
                 color: #eb1616;
             }
 
-            /* ── Detail sections ── */
-            .detail-section {
-                padding: 80px 0;
-            }
-            .detail-section:nth-child(odd) { background: #181818; }
-            .detail-section:nth-child(even) { background: #141414; }
-            .detail-badge {
+            /* ── Status badges ── */
+            .status-badge {
                 display: inline-block;
-                background: #eb1616;
-                color: #fff;
                 font-family: Oswald, sans-serif;
-                font-size: 0.68rem;
-                letter-spacing: 2px;
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
                 text-transform: uppercase;
-                padding: 4px 12px;
-                border-radius: 2px;
+                padding: 3px 10px;
+                border-radius: 20px;
                 margin-bottom: 14px;
+                font-weight: 600;
             }
-            .detail-title {
-                font-family: Oswald, sans-serif;
-                font-size: clamp(1.6rem, 3vw, 2.2rem);
-                color: #fff;
-                text-transform: uppercase;
-                margin-bottom: 14px;
+            .status-selesai {
+                background: #2a2a2a;
+                color: #777;
+                border: 1px solid #444;
             }
-            .detail-desc {
-                color: #aaa;
-                font-size: 0.95rem;
-                line-height: 1.8;
-                margin-bottom: 24px;
-            }
-            .meta-list {
-                list-style: none;
-                padding: 0;
-                margin: 0 0 28px;
-            }
-            .meta-list li {
-                display: flex;
-                gap: 14px;
-                padding: 8px 0;
-                border-bottom: 1px solid #2a2a2a;
-                color: #ccc;
-                font-size: 0.9rem;
-            }
-            .meta-list li strong {
-                color: #eb1616;
-                font-family: Oswald, sans-serif;
-                font-size: 0.75rem;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                min-width: 100px;
-            }
-            .big-icon {
-                font-size: 7rem;
-                text-align: center;
-                line-height: 1;
-                opacity: .85;
+            .status-upcoming {
+                background: #1a2e1a;
+                color: #4caf50;
+                border: 1px solid #4caf50;
             }
         </style>
     </head>
@@ -233,130 +197,128 @@
         <section class="cards-section">
             <div class="container">
                 <div class="row g-4">
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <a class="prog-card" href="#bmc">
+
+                    <!-- 1. BMC (Selesai) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-bmc.html">
                             <span class="card-icon">📋</span>
+                            <span class="status-badge status-selesai">✓ Selesai</span>
                             <h3>Business Model Canvas</h3>
-                            <p>Bina model perniagaan yang kukuh dan sistematik secara visual</p>
-                            <span class="cta-link">Ketahui Lebih →</span>
+                            <p>Bina model perniagaan yang kukuh dan sistematik secara visual melalui workshop hands-on.</p>
+                            <span class="cta-link">Lihat Butiran →</span>
                         </a>
                     </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <a class="prog-card" href="#retort">
+
+                    <!-- 2. Retort Siri 1 (Selesai) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-retort-1.html">
                             <span class="card-icon">📦</span>
-                            <h3>Retort &amp; Pembungkusan</h3>
-                            <p>Teknik pembungkusan produk moden &amp; berstandard industri</p>
+                            <span class="status-badge status-selesai">✓ Selesai</span>
+                            <h3>Kursus Asas Teknologi Retort &amp; Pembungkusan (Siri 1)</h3>
+                            <p>Teknik pembungkusan produk makanan moden yang berstandard industri dan memanjangkan jangka hayat.</p>
+                            <span class="cta-link">Lihat Butiran →</span>
+                        </a>
+                    </div>
+
+                    <!-- 3. Online Business Talk INSKEN & HDC (Selesai) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-insken.html">
+                            <span class="card-icon">💬</span>
+                            <span class="status-badge status-selesai">✓ Selesai</span>
+                            <h3>Online Business Talk by INSKEN &amp; HDC</h3>
+                            <p>Sesi perkongsian ilmu perniagaan secara dalam talian bersama pakar industri dari INSKEN dan HDC.</p>
+                            <span class="cta-link">Lihat Butiran →</span>
+                        </a>
+                    </div>
+
+                    <!-- 4. Percukaian & E-Invois (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-percukaian.html">
+                            <span class="card-icon">🧾</span>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus Percukaian &amp; E-Invois</h3>
+                            <p>Pahami sistem percukaian perniagaan dan cara melaksanakan e-invois selaras kehendak LHDN.</p>
                             <span class="cta-link">Ketahui Lebih →</span>
                         </a>
                     </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <a class="prog-card" href="#digital">
+
+                    <!-- 5. Revolusi Pemasaran Digital (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-digital.html">
                             <span class="card-icon">📱</span>
-                            <h3>Pemasaran Digital</h3>
-                            <p>Strategi pemasaran online yang berkesan &amp; terkini</p>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Revolusi Pemasaran Digital</h3>
+                            <p>Strategi pemasaran media sosial, pengiklanan berbayar, dan SEO untuk tingkatkan jualan dalam talian.</p>
                             <span class="cta-link">Ketahui Lebih →</span>
                         </a>
                     </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <a class="prog-card" href="#ai">
+
+                    <!-- 6. Pendigitalan & AI (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-ai.html">
                             <span class="card-icon">🤖</span>
-                            <h3>AI &amp; Digitalisasi</h3>
-                            <p>Manfaatkan teknologi kecerdasan buatan dalam perniagaan anda</p>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus Pendigitalan &amp; AI</h3>
+                            <p>Manfaatkan teknologi kecerdasan buatan untuk automasi proses dan tingkatkan produktiviti perniagaan.</p>
                             <span class="cta-link">Ketahui Lebih →</span>
                         </a>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Detail: Business Model Canvas -->
-        <section class="detail-section" id="bmc">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-12 col-lg-8">
-                        <span class="detail-badge">Kursus</span>
-                        <h2 class="detail-title">Business Model Canvas</h2>
-                        <p class="detail-desc">Program Business Model Canvas (BMC) membantu usahawan memahami dan mendokumentasikan model perniagaan mereka secara visual dan sistematik. Peserta akan belajar cara mengenal pasti segmen pelanggan, cadangan nilai, saluran pengedaran, sumber utama, dan struktur kos perniagaan melalui sesi workshop hands-on.</p>
-                        <ul class="meta-list">
-                            <li><strong>Tempoh</strong> 1 hari (8 jam)</li>
-                            <li><strong>Sasaran</strong> Usahawan baru &amp; sedia ada</li>
-                            <li><strong>Kelayakan</strong> Warganegara Malaysia, berumur 18 tahun ke atas</li>
-                            <li><strong>Yuran</strong> Percuma (tertakluk kepada kelulusan)</li>
-                        </ul>
-                        <a class="btn theme-element" href="contacts.html">Daftar / Hubungi Kami</a>
+                    <!-- 7. Strategi Jualan & Kesetiaan Pelanggan (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-jualan.html">
+                            <span class="card-icon">🎯</span>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus Strategi Jualan &amp; Kesetiaan Pelanggan</h3>
+                            <p>Teknik jualan berkesan dan cara membina hubungan jangka panjang dengan pelanggan setia.</p>
+                            <span class="cta-link">Ketahui Lebih →</span>
+                        </a>
                     </div>
-                    <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center justify-content-center">
-                        <div class="big-icon">📋</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Detail: Retort & Packaging -->
-        <section class="detail-section" id="retort">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center justify-content-center">
-                        <div class="big-icon">📦</div>
+                    <!-- 8. Pengurusan Akaun & Aliran Tunai (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-akaun.html">
+                            <span class="card-icon">💰</span>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus Pengurusan Akaun &amp; Aliran Tunai</h3>
+                            <p>Kawal kewangan perniagaan anda dengan pengurusan akaun dan aliran tunai yang sistematik.</p>
+                            <span class="cta-link">Ketahui Lebih →</span>
+                        </a>
                     </div>
-                    <div class="col-12 col-lg-8">
-                        <span class="detail-badge">Kursus</span>
-                        <h2 class="detail-title">Retort &amp; Pembungkusan</h2>
-                        <p class="detail-desc">Kursus ini mendedahkan usahawan kepada teknologi retort dan teknik pembungkusan produk makanan yang mematuhi piawaian keselamatan makanan Malaysia. Peserta akan mempelajari cara melanjutkan jangka hayat produk, memilih bahan pembungkusan yang sesuai, serta memenuhi keperluan pelabelan dan pensijilan.</p>
-                        <ul class="meta-list">
-                            <li><strong>Tempoh</strong> 2 hari (16 jam)</li>
-                            <li><strong>Sasaran</strong> Usahawan industri makanan &amp; minuman</li>
-                            <li><strong>Kelayakan</strong> Mempunyai produk makanan aktif</li>
-                            <li><strong>Yuran</strong> Percuma (tertakluk kepada kelulusan)</li>
-                        </ul>
-                        <a class="btn theme-element" href="contacts.html">Daftar / Hubungi Kami</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Detail: Digital Marketing -->
-        <section class="detail-section" id="digital">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-12 col-lg-8">
-                        <span class="detail-badge">Kursus</span>
-                        <h2 class="detail-title">Pemasaran Digital</h2>
-                        <p class="detail-desc">Program Pemasaran Digital UPUK merangkumi strategi pemasaran media sosial, pengiklanan berbayar (Facebook Ads, Google Ads), pengoptimuman enjin carian (SEO), dan pengurusan kandungan kreatif. Usahawan akan belajar cara menjangkau pelanggan yang lebih ramai dan meningkatkan jualan secara dalam talian.</p>
-                        <ul class="meta-list">
-                            <li><strong>Tempoh</strong> 1 hari (8 jam)</li>
-                            <li><strong>Sasaran</strong> Semua usahawan</li>
-                            <li><strong>Kelayakan</strong> Mempunyai perniagaan aktif</li>
-                            <li><strong>Yuran</strong> Percuma (tertakluk kepada kelulusan)</li>
-                        </ul>
-                        <a class="btn theme-element" href="contacts.html">Daftar / Hubungi Kami</a>
+                    <!-- 9. Pembungkusan & Perlabelan (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-pembungkusan.html">
+                            <span class="card-icon">🏷️</span>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus Pembungkusan &amp; Perlabelan</h3>
+                            <p>Reka bentuk pembungkusan menarik dan pelabelan produk yang mematuhi piawaian keselamatan.</p>
+                            <span class="cta-link">Ketahui Lebih →</span>
+                        </a>
                     </div>
-                    <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center justify-content-center">
-                        <div class="big-icon">📱</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Detail: AI & Digitalisasi -->
-        <section class="detail-section" id="ai">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center justify-content-center">
-                        <div class="big-icon">🤖</div>
+                    <!-- 10. Retort Siri 2 (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-retort-2.html">
+                            <span class="card-icon">🔬</span>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus Asas Teknologi Retort (Siri 2)</h3>
+                            <p>Sambungan kursus retort dengan teknik lanjutan dan pensijilan produk makanan berteknologi tinggi.</p>
+                            <span class="cta-link">Ketahui Lebih →</span>
+                        </a>
                     </div>
-                    <div class="col-12 col-lg-8">
-                        <span class="detail-badge">Kursus</span>
-                        <h2 class="detail-title">AI &amp; Digitalisasi</h2>
-                        <p class="detail-desc">Kursus AI &amp; Digitalisasi memperkenalkan usahawan kepada alat kecerdasan buatan yang boleh meningkatkan produktiviti perniagaan — daripada automasi proses, chatbot pelanggan, analitik data, hingga penjanaan kandungan pemasaran. Sesuai untuk usahawan yang ingin kekal relevan dan berdaya saing dalam era digital.</p>
-                        <ul class="meta-list">
-                            <li><strong>Tempoh</strong> 1 hari (8 jam)</li>
-                            <li><strong>Sasaran</strong> Semua usahawan</li>
-                            <li><strong>Kelayakan</strong> Mempunyai perniagaan aktif</li>
-                            <li><strong>Yuran</strong> Percuma (tertakluk kepada kelulusan)</li>
-                        </ul>
-                        <a class="btn theme-element" href="contacts.html">Daftar / Hubungi Kami</a>
+
+                    <!-- 11. MyIPO & Penjenamaan (Akan Datang) -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="prog-card" href="program-myipo.html">
+                            <span class="card-icon">®️</span>
+                            <span class="status-badge status-upcoming">● Akan Datang</span>
+                            <h3>Kursus MyIPO &amp; Penjenamaan Bisnes</h3>
+                            <p>Daftarkan harta intelek perniagaan anda dan bina jenama kukuh melalui strategi penjenamaan berkesan.</p>
+                            <span class="cta-link">Ketahui Lebih →</span>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </section>
