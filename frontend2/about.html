@@ -10,6 +10,65 @@
         <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
 
         <link rel="stylesheet" href="css/about.min.css" />
+    <style>
+        /* ── Service card equal height ── */
+        .services_list { align-items: stretch !important; }
+        .services_list-item { display: flex !important; flex-direction: column !important; }
+        .services_list-item .services_list-item_wrapper { flex: 1 !important; }
+
+        /* ── Hide old template SVG icons ── */
+        .services_list-item[data-order] .services-icon { display: none !important; }
+
+        /* ── Icon container sizing ── */
+        .services_list-item[data-order] .icon {
+            position: relative;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 40px !important;
+            min-width: 40px !important;
+            height: 40px !important;
+            flex-shrink: 0;
+        }
+        .services_list-item[data-order] .icon::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: center / contain no-repeat;
+        }
+
+        /* ── 1. Mikro Kredit — wallet ── */
+        .services_list-item[data-order="1"] .icon::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z' fill='%23EB1616'/%3E%3C/svg%3E");
+        }
+        /* ── 2. Khidmat Nasihat — chat bubble ── */
+        .services_list-item[data-order="2"] .icon::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z' fill='%23EB1616'/%3E%3C/svg%3E");
+        }
+        /* ── 3. Kemahiran — graduation cap ── */
+        .services_list-item[data-order="3"] .icon::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3L1 9l4 2.18V15s0 3 7 3 7-3 7-3v-3.82L23 9 12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 14.99S16 16 12 16s-5-1.01-5-1.01v-3.22L12 15l5-3.23v3.22z' fill='%23EB1616'/%3E%3C/svg%3E");
+        }
+        /* ── 4. Aktiviti Usahawan — calendar ── */
+        .services_list-item[data-order="4"] .icon::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z' fill='%23EB1616'/%3E%3C/svg%3E");
+        }
+        /* ── 5. Info Usahawan — info circle ── */
+        .services_list-item[data-order="5"] .icon::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z' fill='%23EB1616'/%3E%3C/svg%3E");
+        }
+        /* ── 6. Pemasaran — megaphone ── */
+        .services_list-item[data-order="6"] .icon::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4-.4-.53-.8-1.07-1.2-1.6zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34z' fill='%23EB1616'/%3E%3C/svg%3E");
+        }
+
+        /* ── Fungsi UPUK card stronger shadow ── */
+        section[style*="f0f0f0"] .row > div > div {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+            border: 1px solid #d8d8d8 !important;
+        }
+    </style>
     </head>
     <body>
         <header class="header" data-page="about">
@@ -97,7 +156,7 @@
             <!-- about section start -->
             <section class="about section">
                 <div class="container d-xl-flex flex-wrap">
-                    <div class="about_header section_header col-xl-6">
+                    <div class="about_header section_header col-12">
                         <h2 class="about_header-title section_header-title" data-aos="fade-right">
                             Pengenalan
                         </h2>
@@ -109,7 +168,10 @@
                             >Tentang UPUK</span
                         >
                     </div>
-                    <div class="about_info col-xl-6 d-sm-flex">
+                    <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="80">
+                        <p class="text" style="font-size:1.05rem;line-height:1.9;">Penubuhan Unit Pembangunan Usahawan Negeri Kedah (UPUK) merupakan salah satu inisiatif Kerajaan Negeri Kedah untuk membantu para usahawan mencapai tahap daya saing dan daya maju yang tinggi.</p>
+                    </div>
+                    <div class="about_info col-12 d-sm-flex">
                         <div class="about_info-fact">
                             <h3 class="about_info-fact_title" data-aos="fade-up">Visi</h3>
                             <p class="about_info-fact_description" data-aos="fade-up">
@@ -122,6 +184,16 @@
                                 Membangunkan usahawan yang berpengetahuan, berinovasi dan berdaya saing melalui aktiviti-aktiviti yang menyokong dalam pembangunan dan pertumbuhan ekonomi Negeri Kedah.
                             </p>
                         </div>
+                        <div class="about_info-fact">
+                            <h3 class="about_info-fact_title" data-aos="fade-up" data-aos-delay="100">Objektif</h3>
+                            <div class="about_info-fact_description" data-aos="fade-up" data-aos-delay="100">
+                                <ol style="padding-left:18px;margin:0;">
+                                    <li style="margin-bottom:8px;">Sebagai pusat penyelarasan dan rujukan utama berkaitan pembangunan usahawan di Negeri Kedah.</li>
+                                    <li style="margin-bottom:8px;">Sebagai pusat informasi usahawan yang menyediakan pelbagai maklumat mengenai keusahawanan di Negeri Kedah.</li>
+                                    <li>Melaksanakan program dan aktiviti pembangunan usahawan bagi memulakan perniagaan atau mengembangkan perniagaan sedia ada.</li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                     <div class="about_media col-12" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
                         <picture>
@@ -129,21 +201,12 @@
                             <img class="lazy about_media-img" data-src="Img/aboutMain.png" src="Img/aboutMain.png" alt="media" />
                         </picture>
                     </div>
-                    <div class="about_text">
-                        <p data-aos="fade-up">Penubuhan Unit Pembangunan Usahawan Negeri Kedah (UPUK) merupakan salah satu inisiatif Kerajaan Negeri Kedah untuk membantu para usahawan mencapai tahap daya saing dan daya maju yang tinggi.</p>
-                        <h2 class="section_header-title">Objektif</h2><br>
-                        <ol class="about_text-list">
-                            <li>1. Sebagai pusat penyelarasan dan rujukan utama berkaitan pembangunan usahawan di Negeri Kedah.</li>
-                            <li>2. Sebagai pusat informasi usahawan yang menyediakan pelbagai maklumat mengenai keusahawanan di Negeri Kedah.</li>
-                            <li>3. Melaksanakan program dan aktiviti pembangunan usahawan bagi memulakan perniagaan atau mengembangkan perniagaan sedia ada.</li>
-                        </ol>
-                    </div>
                 </div>
             </section>
             <!-- about section end -->
 
             <!-- fungsi upuk section start -->
-            <section class="section--nopt" style="padding: 60px 0; background: #f8f9fa;">
+            <section class="section--nopt" style="padding: 60px 0; background: #f0f0f0; border-top: 3px solid #EB1616;">
                 <div class="container">
                     <div class="text-center mb-5">
                         <h2 class="section_header-title" data-aos="fade-up">Fungsi UPUK</h2>
@@ -358,7 +421,7 @@
                     <div class="services_btn wrapper" data-aos="fade-left">
                         <a class="btn theme-element" href="contacts.html">Hubungi Kami</a>
                     </div>
-                    <ul class="services_list flex-grow-1 d-md-flex flex-wrap align-items-xxl-start">
+                    <ul class="services_list flex-grow-1 d-md-flex flex-wrap align-items-stretch">
                         <li class="services_list-item col-md-6 col-xl-4" data-aos="fade-up" data-order="1">
                             <div class="services_list-item_wrapper d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
                                 <span class="icon">
@@ -581,19 +644,19 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="services_list-item col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="50" data-order="7">
-                            <div class="services_list-item_wrapper d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
-                                <span class="icon">
-                                    <svg class="services-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm-2 28v-8H10l10-18v8h8L18 32z" fill="#EB1616"/>
-                                        <path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm0 28C13.38 32 8 26.62 8 20S13.38 8 20 8s12 5.38 12 12-5.38 12-12 12z" fill="white" opacity="0.3"/>
+                        <li class="services_list-item col-12" data-aos="fade-up" data-aos-delay="50" data-order="7">
+                            <div class="services_list-item_wrapper" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;padding:36px;display:flex;flex-direction:row;align-items:flex-start;gap:28px;flex-wrap:wrap;">
+                                <span style="display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3z" fill="white"/>
                                     </svg>
                                 </span>
-                                <div class="main d-flex flex-column justify-content-between">
-                                    <h3 class="title">Penyelarasan Program Usahawan</h3>
-                                    <p class="description">
-                                        Penyelarasan dan integrasi semua program usahawan negeri bagi memastikan kecekapan dan keberkesanan pengurusan keusahawanan.
+                                <div style="flex:1;min-width:220px;">
+                                    <h3 style="color:white;font-size:1.5rem;font-weight:700;margin-bottom:12px;">Penyelarasan Program Usahawan</h3>
+                                    <p style="color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.8;margin-bottom:24px;">
+                                        Penyelarasan dan integrasi semua program usahawan negeri bagi memastikan kecekapan dan keberkesanan pengurusan keusahawanan. UPUK bertindak sebagai hab pusat yang menyatukan semua pihak berkepentingan dalam ekosistem keusahawanan Negeri Kedah untuk pertumbuhan yang mampan dan terselaras.
                                     </p>
+                                    <a href="404.html" style="display:inline-block;background:#EB1616;color:white;padding:11px 30px;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;letter-spacing:0.3px;">Ketahui Lebih Lanjut</a>
                                 </div>
                             </div>
                         </li>
